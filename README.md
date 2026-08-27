@@ -23,17 +23,17 @@ Install all **279 skills** into any existing project or new repository in second
 
 ### Windows (PowerShell)
 ```powershell
-irm https://raw.githubusercontent.com/aakashss/universal-agent-skills/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/aakash1552005/universal-agent-skills/main/install.ps1 | iex
 ```
 
 ### macOS / Linux (Bash)
 ```bash
-curl -fsSL https://raw.githubusercontent.com/aakashss/universal-agent-skills/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/aakash1552005/universal-agent-skills/main/install.sh | bash
 ```
 
 ### Manual Git Clone
 ```bash
-git clone https://github.com/aakashss/universal-agent-skills.git
+git clone https://github.com/aakash1552005/universal-agent-skills.git
 # Copy .agents/ and .agent/ into your project root
 ```
 

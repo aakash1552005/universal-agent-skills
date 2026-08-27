@@ -12,7 +12,7 @@ echo -e "\033[1;33m Target Directory: ${TARGET_DIR}\033[0m"
 echo -e "\033[1;36m=================================================================\033[0m"
 
 TEMP_DIR=$(mktemp -d)
-SKILLS_REPO="https://github.com/aakashss/universal-agent-skills.git"
+SKILLS_REPO="https://github.com/aakash1552005/universal-agent-skills.git"
 
 echo -e "\033[1;36m⬇️  Cloning skills repository...\033[0m"
 git clone --depth 1 "$SKILLS_REPO" "$TEMP_DIR"

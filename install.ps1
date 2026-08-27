@@ -11,7 +11,7 @@ Write-Host " 🚀 Installing Universal AI Agent Skills (279 Skills) " -Foregroun
 Write-Host " Target Directory: $TargetDir" -ForegroundColor Yellow
 Write-Host "=================================================================" -ForegroundColor Cyan
 
-$SkillsRepoUrl = "https://github.com/aakashss/universal-agent-skills.git"
+$SkillsRepoUrl = "https://github.com/aakash1552005/universal-agent-skills.git"
 $TempDir = Join-Path $env:TEMP "universal_skills_tmp"
 
 if (Test-Path $TempDir) {
