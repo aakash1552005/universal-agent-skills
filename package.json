@@ -1,0 +1,35 @@
+{
+  "name": "universal-agent-skills",
+  "version": "1.0.0",
+  "description": "Production-grade library of 279 AI agent skills across engineering, data, AI, cloud, security, and startup architecture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -e \"console.log('Validating 279 skills...');\" && py -3 scripts/validate_skills.py",
+    "build:index": "py -3 scripts/update_catalog.py"
+  },
+  "keywords": [
+    "ai",
+    "agent-skills",
+    "ai-agents",
+    "gstack",
+    "antigravity",
+    "cursor",
+    "claude-code",
+    "windsurf",
+    "full-stack",
+    "machine-learning",
+    "data-engineering",
+    "seo",
+    "saas"
+  ],
+  "author": "Aakash S S",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aakashss/universal-agent-skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aakashss/universal-agent-skills/issues"
+  },
+  "homepage": "https://github.com/aakashss/universal-agent-skills#readme"
+}

@@ -1,0 +1,28 @@
+name: 🐛 Bug Report
+description: Report an outdated skill pattern, broken link, or formatting issue
+title: "[BUG]: <Short summary>"
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide details on the issue you encountered in a skill or script.
+  - type: input
+    id: affected_skill
+    attributes:
+      label: Affected Skill(s) / File
+      placeholder: e.g. .agents/skills/python-fastapi-pro/SKILL.md
+    validations:
+      required: true
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: Describe the Issue
+      placeholder: Describe the outdated API pattern, broken link, or error.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: Suggested Fix / Modern Replacement
+      placeholder: What should the code or documentation be updated to?

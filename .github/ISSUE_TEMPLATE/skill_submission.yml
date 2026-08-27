@@ -1,0 +1,43 @@
+name: 🚀 Propose / Submit a New Skill
+description: Submit a new production-ready AI agent skill to the global library
+title: "[SKILL]: <Skill Name>"
+labels: ["skill-submission", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to the **Universal AI Agent Skills Library**! Please fill out the details below to help us review and merge your skill.
+  - type: input
+    id: skill_name
+    attributes:
+      label: Skill Name
+      description: Use kebab-case (e.g., `kubernetes-gitops-argo`, `duckdb-olap-patterns`)
+      placeholder: e.g. temporal-durable-execution
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Skill Trigger Description
+      description: 1-2 sentence description explaining when the AI should activate this skill.
+      placeholder: Master Kubernetes GitOps with ArgoCD, Helm charts, and progressive canary rollouts.
+    validations:
+      required: true
+  - type: textarea
+    id: domain_and_principles
+    attributes:
+      label: Key Architectural Principles & Best Practices
+      description: What makes this skill production-grade? (Patterns, frameworks, benchmarks)
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Quality Checklist
+      options:
+        - label: I have formatted `SKILL.md` with valid YAML frontmatter (`name`, `description`).
+          required: true
+        - label: The skill contains concrete, zero-placeholder code templates.
+          required: true
+        - label: The skill has been tested in both `.agents/skills/` and `.agent/skills/`.
+          required: true
