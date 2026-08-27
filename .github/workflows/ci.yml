@@ -19,34 +19,5 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Validate SKILL.md Frontmatter & Structure
-        run: |
-          python -c "
-          import os, re, sys
-          from pathlib import Path
-
-          skills_dir = Path('.agents/skills')
-          if not skills_dir.exists():
-              print('❌ .agents/skills directory not found')
-              sys.exit(1)
-
-          errors = 0
-          total = 0
-          for item in skills_dir.iterdir():
-              if item.is_dir():
-                  total += 1
-                  skill_file = item / 'SKILL.md'
-                  if not skill_file.exists():
-                      print(f'❌ Missing SKILL.md in {item.name}')
-                      errors += 1
-                      continue
-                  content = skill_file.read_text(encoding='utf-8', errors='ignore')
-                  if not re.match(r'^---\s*\nname:\s*.+\ndescription:\s*.+\n---', content, re.MULTILINE):
-                      print(f'❌ Invalid YAML frontmatter in {item.name}/SKILL.md')
-                      errors += 1
-
-          print(f'Checked {total} skills. Errors: {errors}')
-          if errors > 0:
-              sys.exit(1)
-          print('✅ All skills passed structure & frontmatter validation!')
-          "
+      - name: Validate Skills
+        run: python scripts/validate_skills.py

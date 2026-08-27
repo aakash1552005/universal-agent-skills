@@ -34,7 +34,7 @@ curl -fsSL https://raw.githubusercontent.com/aakash1552005/universal-agent-skill
 ### Manual Git Clone
 ```bash
 git clone https://github.com/aakash1552005/universal-agent-skills.git
-# Copy .agents/ and .agent/ into your project root
+# Copy .agents/ into your project root
 ```
 
 ---
@@ -104,8 +104,8 @@ See the comprehensive, searchable index in **[`SKILLS_INDEX.md`](SKILLS_INDEX.md
 
 Every skill is formatted with standard YAML frontmatter and tested for:
 - ✅ **Antigravity IDE** (`.agents/skills/`)
-- ✅ **Claude Code** (`.agent/skills/` or `.claude/skills/`)
-- ✅ **Cursor** (`.agent/skills/`)
+- ✅ **Claude Code** (`.agents/skills/` or `.claude/skills/`)
+- ✅ **Cursor** (`.agents/skills/`)
 - ✅ **Windsurf** (`.agents/skills/`)
 - ✅ **OpenCode & Custom Agent Swarms**
 

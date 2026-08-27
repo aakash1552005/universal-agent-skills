@@ -1,5 +1,5 @@
 # Universal AI Agent Skills Library Installer (Windows PowerShell)
-# Usage: irm https://raw.githubusercontent.com/<username>/universal-agent-skills/main/install.ps1 | iex
+# Usage: irm https://raw.githubusercontent.com/aakash1552005/universal-agent-skills/main/install.ps1 | iex
 # Or locally: .\install.ps1
 
 param (
@@ -27,14 +27,10 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 $DestAgents = Join-Path $TargetDir ".agents\skills"
-$DestAgent = Join-Path $TargetDir ".agent\skills"
-
 New-Item -ItemType Directory -Force -Path $DestAgents | Out-Null
-New-Item -ItemType Directory -Force -Path $DestAgent | Out-Null
 
-Write-Host "📦 Copying skills to .agents\skills and .agent\skills..." -ForegroundColor Cyan
+Write-Host "📦 Copying skills to .agents\skills..." -ForegroundColor Cyan
 Copy-Item -Recurse -Force (Join-Path $TempDir ".agents\skills\*") $DestAgents
-Copy-Item -Recurse -Force (Join-Path $TempDir ".agent\skills\*") $DestAgent
 
 Remove-Item -Recurse -Force $TempDir
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Universal AI Agent Skills Library Installer (macOS / Linux)
-# Usage: curl -fsSL https://raw.githubusercontent.com/<username>/universal-agent-skills/main/install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/aakash1552005/universal-agent-skills/main/install.sh | bash
 
 set -e
 
@@ -18,11 +18,9 @@ echo -e "\033[1;36m⬇️  Cloning skills repository...\033[0m"
 git clone --depth 1 "$SKILLS_REPO" "$TEMP_DIR"
 
 mkdir -p "${TARGET_DIR}/.agents/skills"
-mkdir -p "${TARGET_DIR}/.agent/skills"
 
-echo -e "\033[1;36m📦 Copying skills to .agents/skills and .agent/skills...\033[0m"
+echo -e "\033[1;36m📦 Copying skills to .agents/skills...\033[0m"
 cp -r "${TEMP_DIR}/.agents/skills/"* "${TARGET_DIR}/.agents/skills/"
-cp -r "${TEMP_DIR}/.agent/skills/"* "${TARGET_DIR}/.agent/skills/"
 
 rm -rf "$TEMP_DIR"
 
