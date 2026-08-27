@@ -1,0 +1,52 @@
+name: Automated Release Publisher
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Universal AI Agent Skills Library ${{ github.ref_name }}
+          body: |
+            ## 🚀 Universal AI Agent Skills Library ${{ github.ref_name }}
+            
+            Welcome to the official **${{ github.ref_name }}** release of the **Universal AI Agent Skills Library**!
+            
+            ### 📦 What's Included:
+            - **279 Production-Grade Skills** across 11 core categories.
+            - **GStack by Garry Tan**: All 54 subskills (CEO/Eng/Design reviews, QA, Ship, Office Hours).
+            - **Addy Osmani's Engineering Skills**: All 24 skills and companion guides.
+            - **Strix AI Security**: Automated OWASP Top 10 pentesting and vulnerability remediation.
+            - **UI/UX Pro Max & 21st.dev Magic UI**: 40+ component design styles.
+            - **Big Tech Architectures**: Google SRE, Microsoft .NET 9, AWS Serverless, Meta React 19, Netflix resilience.
+            - **AI Agents & Workflows**: Anthropic MCP, LangGraph, CrewAI, AutoGen, LlamaIndex, n8n, Temporal.io, Browser-Use.
+            - **Startup & SaaS Infrastructure**: Stripe Billing, Postgres RLS Multi-Tenancy, Auth.js/Clerk, Flutter/Expo.
+            
+            ### ⚡ 1-Click Installation:
+            - **Windows (PowerShell)**:
+              ```powershell
+              irm https://raw.githubusercontent.com/${{ github.repository }}/main/install.ps1 | iex
+              ```
+            - **macOS / Linux (Bash)**:
+              ```bash
+              curl -fsSL https://raw.githubusercontent.com/${{ github.repository }}/main/install.sh | bash
+              ```
+            
+            **Go build something amazing! 🚀**
+          draft: false
+          prerelease: false
+          generate_release_notes: true
