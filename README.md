@@ -10,7 +10,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
 
 ### **The world's most comprehensive, unified open-source library of 537 production AI agent skills.**
-*Turn any AI coding assistant into a Principal Staff Engineer, Data Architect, AI Scientist, and Startup Co-founder.*
+*Empower any AI coding assistant to operate as a Principal Staff Engineer, Data Architect, Marketing Strategist, AI Scientist, or Startup Co-founder.*
 
 [Quickstart](#-1-click-installation) • [Why This Library](#-why-universal-agent-skills) • [What You Can Build](#-what-you-can-build) • [Full 537-Skill Catalog](#-full-537-skill-catalog) • [Contributing](#-contributing) • [License](#-license)
 
@@ -20,15 +20,15 @@
 
 ## 🌟 Why Universal Agent Skills?
 
-Instead of scattered, fragmented prompt snippets or tool-specific plugins, **Universal Agent Skills** consolidates **all 537 skills into one single, unified workspace standard** (`.agents/skills/`). 
+Instead of scattered, fragmented prompt snippets or tool-specific plugins, **Universal Agent Skills** consolidates **537 elite skills into a single, unified workspace standard** (`.agents/skills/`). 
 
-Whether you are a **student** learning state-of-the-art tech, an **enterprise employee** writing mission-critical software, or a **solo founder** building the next unicorn startup, this library gives your AI assistant instant access to elite battle-tested patterns, zero-placeholder code templates, and architectural decision trees.
+Whether you are an **enterprise engineering team** maintaining mission-critical software, a **founder** scaling the next tech unicorn, or an **agency** automating complex workflows across domains, this library provides your AI assistant with instant access to battle-tested patterns, zero-placeholder templates, and sophisticated architectural decision frameworks.
 
 ---
 
 ## 🚀 1-Click Installation
 
-Install all **537 skills** into any existing project or new workspace in seconds:
+Deploy all **537 skills** into any existing project or new workspace instantly:
 
 ### Windows (PowerShell)
 ```powershell
@@ -50,7 +50,7 @@ git clone https://github.com/aakash1552005/universal-agent-skills.git
 
 ## 🏛️ Unified "All-in-One" Architecture
 
-All 537 skills live in a single, standardized directory structure with zero duplicate folders or clutter:
+All 537 skills reside in a meticulously organized, standardized directory structure designed to eliminate clutter and duplication:
 
 ```
 universal-agent-skills/
@@ -60,10 +60,9 @@ universal-agent-skills/
 │   ├── owasp-top-10-testing/           # Strix Cybersecurity & Pentesting
 │   ├── ui-ux-pro-max/                  # UI/UX Pro Max & 35+ Visual Styles
 │   ├── google-cloud-sre-patterns/      # Google SRE & Distributed Tracing
-│   ├── microsoft-dotnet-csharp-pro/    # Microsoft .NET 9 & Azure Architectures
-│   ├── mcp-server-and-client-builder/  # Anthropic Model Context Protocol (MCP)
+│   ├── marketing-tiktok-strategist/    # Agency Agents: Digital Marketing & SEO
+│   ├── gis-spatial-data-scientist/     # Agency Agents: Spatial Computing & GIS
 │   ├── n8n-workflow-automation/        # n8n & AI Agent Workflow Automation
-│   ├── saas-billing-and-stripe/        # Stripe Subscription Monetization
 │   └── ... (537 production skills total)
 ├── .github/
 │   ├── workflows/ci.yml                # Automated CI skill validation pipeline
@@ -83,47 +82,54 @@ universal-agent-skills/
 
 ---
 
-## 🎯 Tailored for Every Developer Stage
+## 🎯 Tailored for Every Professional Persona
 
 | Persona | How Universal Skills Empowers You |
 |---|---|
-| **🎓 Students & Researchers** | Build cutting-edge machine learning research with PyTorch 2.x, analyze complex datasets with Polars/Arrow, build computer vision pipelines with YOLO/SAM/CLIP, and write publication-grade documentation. |
-| **🏢 Tech Employees & Senior Engineers** | Apply Big Tech production standards: Google SRE (SLI/SLO math), Netflix/Uber microservices resilience (Circuit Breakers & Kafka), .NET 9 CQRS, Go microservices, and multi-axis code reviews. |
-| **🚀 Startup Founders & Solo Builders** | Ship venture-grade SaaS in days: Stripe subscription billing, PostgreSQL Row-Level Security multi-tenancy, Auth.js / Clerk, Flutter/Expo mobile apps, and AEO/SEO search dominance. |
-| **🤖 AI Agent Engineers** | Build autonomous workflows with Model Context Protocol (MCP), LangGraph stateful graphs, CrewAI swarms, AutoGen debate loops, and n8n visual pipelines. |
+| **🏢 Enterprise Engineers & Architects** | Implement Big Tech production standards: Google SRE (SLI/SLO), Netflix/Uber microservices resilience (Circuit Breakers & Kafka), .NET 9 CQRS, Go microservices, and multi-axis code reviews. |
+| **🚀 Startup Founders & Solo Builders** | Ship venture-grade SaaS in days: Stripe subscription billing, PostgreSQL RLS multi-tenancy, Auth.js, Flutter mobile apps, and programmatic SEO dominance. |
+| **🤖 AI Agent & Automation Engineers** | Architect autonomous workflows with Model Context Protocol (MCP), LangGraph stateful graphs, CrewAI swarms, and self-healing n8n visual pipelines. |
+| **📈 Marketing, Sales & Strategy Agencies** | Deploy specialized agency agents: SEO strategists, B2B sales pipeline analysts, paid media buyers, product managers, and XR/spatial computing designers. |
 
 ---
 
 ## 🛠️ What You Can Build
 
-```
-┌────────────────────────────────────────────────────────────────────────────┐
-│                       WHAT YOU CAN SHIP WITH THIS REPO                     │
-├────────────────────────┬───────────────────────────┬───────────────────────┤
-│ 🚀 Full-Stack SaaS     │ 📊 Autonomous Analytics   │ 🤖 Autonomous Agents  │
-│ • Stripe Subscriptions │ • Natural Language to SQL │ • MCP Tool Servers    │
-│ • Postgres RLS Tenancy │ • Polars & Arrow Streaming│ • LangGraph State Gts │
-│ • Auth.js & Supabase   │ • Automated BI Dashboards │ • CrewAI Swarms       │
-│ • Next.js 15 & Svelte 5│ • dbt, Spark & Airflow    │ • n8n Self-Healing    │
-├────────────────────────┼───────────────────────────┼───────────────────────┤
-│ 📱 Cross-Platform Apps │ 🔒 Enterprise Security    │ 📈 Search & Growth    │
-│ • Flutter 3.x Mobile   │ • OWASP Top 10 Pentesting │ • Perplexity/Claude AEO│
-│ • React Native / Expo  │ • Strix Automated Audits  │ • Generative GEO Graph│
-│ • Offline-first SQLite │ • SOC2, GDPR, PCI DSS     │ • Programmatic SEO    │
-└────────────────────────┴───────────────────────────┴───────────────────────┘
-```
+Leverage the combined power of engineering excellence and specialized agency roles to construct end-to-end solutions.
+
+### 🌐 Scalable SaaS & Engineering
+- **Enterprise SaaS Platforms**: Stripe Subscriptions, PostgreSQL RLS Tenancy, Next.js 15 & Auth.js, multi-tenant architectures.
+- **Cross-Platform Applications**: Flutter 3.x Mobile, React Native / Expo, Offline-first SQLite sync.
+- **Robust Infrastructure**: Kubernetes orchestration, Terraform IaC, Databricks Lakehouse, AWS Serverless paradigms.
+
+### 🧠 Advanced AI & Autonomous Agents
+- **Agentic Ecosystems**: Custom MCP Tool Servers, LangGraph State Machines, CrewAI collaborative swarms.
+- **Data & Analytics**: Natural Language to SQL, Polars & Arrow streaming, automated BI dashboards, automated dbt transformations.
+- **Machine Learning**: Fine-tuned PEFT/LoRA models, PyTorch vision pipelines, advanced RAG architectures.
+
+### 🏢 Agency Operations & Growth
+- **Digital Marketing & Growth**: Programmatic SEO generation, TikTok/Twitter audience strategies, AEO (Answer Engine Optimization), App Store Optimization (ASO).
+- **Sales & Project Management**: Jira Workflow automation, B2B outbound strategizing, meeting note synthesis, specialized pipeline analysis.
+- **Specialized Industry Verticals**: 
+  - *GIS & Spatial*: Drone reality mapping, 3D Scene development, Cartography.
+  - *Game Dev*: Engine architecture, Level design, FMOD audio engineering.
+  - *Finance*: Virtual economy design, investment research, automated bookkeeping.
+
+### 🔒 Enterprise Security & Compliance
+- **Offensive & Defensive Security**: OWASP Top 10 pentesting, Strix automated vulnerability audits, zero-trust architecture.
+- **Compliance Automation**: SOC2, GDPR, PCI DSS, and FedRAMP governance protocols.
 
 ---
 
 ## 📦 Curated Skill Ecosystem (Included Sources)
 
-1. **[Garry Tan's GStack](https://github.com/garrytan/gstack) (All 54 Subskills)**: CEO/Eng/Design plan reviews, QA automation, zero-downtime shipping, incident investigation, and YC Office Hours sounding board.
-2. **[Addy Osmani's Agent Skills](https://github.com/addyosmani/agent-skills) (All 24 Skills + References)**: Web performance, Core Web Vitals, API ergonomics, spec-driven development, and architectural ADRs.
-3. **[Strix AI Security](https://github.com/usestrix/strix) (8 Skills)**: Automated vulnerability scanning, penetration testing, and security patch remediation.
-4. **[UI/UX Pro Max & 21st.dev Magic UI](https://21st.dev) (40+ Skills)**: Production component blocks, Tailwind CSS v4, dynamic bento grids, and 35+ visual aesthetics.
-5. **Big Tech Architectures**: Google SRE / BigQuery / gRPC, Microsoft Azure / .NET 9 / Semantic Kernel, AWS Serverless, Meta React 19 / GraphQL, Netflix resilience.
-6. **AI Agent Frameworks**: Anthropic MCP, LangGraph, CrewAI, AutoGen, LlamaIndex, and 3-Tier Long-Term Memory.
-7. **AI Workflow Automation**: n8n AI agent workflows, Google Cloud Workflows / Vertex AI Flows, Make/Zapier, Temporal.io, and Browser-Use.
+1. **[Garry Tan's GStack](https://github.com/garrytan/gstack)**: CEO/Eng/Design plan reviews, QA automation, zero-downtime shipping, incident investigation, and YC Office Hours sounding board.
+2. **[Agency Agents Framework](https://github.com/msitarzewski/agency-agents)**: Over 260+ specialized professional personas spanning Marketing, GIS, Healthcare, Game Development, Finance, Sales, and Strategy.
+3. **[Addy Osmani's Agent Skills](https://github.com/addyosmani/agent-skills)**: Web performance, Core Web Vitals, API ergonomics, spec-driven development, and architectural ADRs.
+4. **[Strix AI Security](https://github.com/usestrix/strix)**: Automated vulnerability scanning, penetration testing, and security patch remediation.
+5. **[UI/UX Pro Max & 21st.dev Magic UI](https://21st.dev)**: Production component blocks, Tailwind CSS v4, dynamic bento grids, and 35+ visual aesthetics.
+6. **Big Tech Architectures**: Google SRE / BigQuery / gRPC, Microsoft Azure / .NET 9, AWS Serverless, Meta React 19 / GraphQL, Netflix resilience.
+7. **AI Agent Frameworks**: Anthropic MCP, LangGraph, CrewAI, AutoGen, LlamaIndex, and 3-Tier Long-Term Memory.
 
 ---
 
@@ -141,7 +147,8 @@ See the comprehensive, searchable index in **[`SKILLS_INDEX.md`](SKILLS_INDEX.md
 - 🎨 **UI/UX Design Systems & Visual Styles (35+ Aesthetics)**
 - ⚡ **Backend & Systems Engineering (Python, Go, Rust, Node, C#, Scala)**
 - 🔒 **Cybersecurity, DevSecOps & Enterprise Compliance**
-- 🚢 **Software Engineering Best Practices & Leadership (GStack & Addy Osmani)**
+- 🚢 **Software Engineering Best Practices & Leadership**
+- 💼 **Professional Agency Roles (Marketing, Finance, Healthcare, Sales, GIS)**
 
 ---
 
@@ -149,7 +156,7 @@ See the comprehensive, searchable index in **[`SKILLS_INDEX.md`](SKILLS_INDEX.md
 
 This repository is **actively maintained and continuously updated**. As new AI models, web frameworks, agent protocols, and engineering standards emerge, new skills are added directly to the library.
 
-Upcoming skill modules on our roadmap:
+**Upcoming skill modules on our roadmap:**
 - 🌐 Quantum Computing & Qiskit Algorithms
 - 🧬 AI Bio-Informatics & Genomics Pipelines
 - ⚡ WebAssembly (Wasm) & Edge Computing Networks
@@ -159,7 +166,7 @@ Upcoming skill modules on our roadmap:
 
 ## 🌐 Zero-Config Compatibility
 
-Every skill is formatted with standard YAML frontmatter and tested for:
+Every skill is formatted with standard YAML frontmatter and thoroughly tested for:
 - ✅ **Antigravity IDE** (`.agents/skills/`)
 - ✅ **Claude Code** (`.agents/skills/` or `.claude/skills/`)
 - ✅ **Cursor** (`.agents/skills/`)
@@ -170,7 +177,7 @@ Every skill is formatted with standard YAML frontmatter and tested for:
 
 ## 🤝 Contributing
 
-Contributions from the global open-source community are warmly welcomed! If you have a battle-tested engineering pattern or framework skill, please share it. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for full submission guidelines.
+Contributions from the global open-source community are warmly welcomed! If you have a battle-tested engineering pattern, professional framework, or specialized AI skill, please share it. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for full submission guidelines.
 
 ---
 
