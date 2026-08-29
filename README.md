@@ -3,16 +3,16 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
-[![Total Skills](https://img.shields.io/badge/Total%20Skills-547%20Skills-emerald?style=for-the-badge)](#-full-547-skill-catalog)
+[![Total Skills](https://img.shields.io/badge/Total%20Skills-537%20Skills-emerald?style=for-the-badge)](#-full-537-skill-catalog)
 [![Unified Location](https://img.shields.io/badge/Architecture-All--in--One%20Unified%20Directory-blueviolet?style=for-the-badge)](#-unified-all-in-one-architecture)
 [![Active Updates](https://img.shields.io/badge/Status-Actively%20Maintained%20%26%20Updated-success?style=for-the-badge)](#-continuous-updates--roadmap)
 [![Cross-Tool Compatibility](https://img.shields.io/badge/Compatible%20With-Antigravity%20|%20Claude%20Code%20|%20Cursor%20|%20Windsurf-indigo?style=for-the-badge)](#-zero-config-compatibility)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
 
-### **The world's most comprehensive, unified open-source library of 547 production AI agent skills.**
+### **The world's most comprehensive, unified open-source library of 537 production AI agent skills.**
 *Turn any AI coding assistant into a Principal Staff Engineer, Data Architect, AI Scientist, and Startup Co-founder.*
 
-[Quickstart](#-1-click-installation) • [Why This Library](#-why-universal-agent-skills) • [What You Can Build](#-what-you-can-build) • [Full 547-Skill Catalog](#-full-547-skill-catalog) • [Contributing](#-contributing) • [License](#-license)
+[Quickstart](#-1-click-installation) • [Why This Library](#-why-universal-agent-skills) • [What You Can Build](#-what-you-can-build) • [Full 537-Skill Catalog](#-full-537-skill-catalog) • [Contributing](#-contributing) • [License](#-license)
 
 </div>
 
@@ -20,7 +20,7 @@
 
 ## 🌟 Why Universal Agent Skills?
 
-Instead of scattered, fragmented prompt snippets or tool-specific plugins, **Universal Agent Skills** consolidates **all 547 skills into one single, unified workspace standard** (`.agents/skills/`). 
+Instead of scattered, fragmented prompt snippets or tool-specific plugins, **Universal Agent Skills** consolidates **all 537 skills into one single, unified workspace standard** (`.agents/skills/`). 
 
 Whether you are a **student** learning state-of-the-art tech, an **enterprise employee** writing mission-critical software, or a **solo founder** building the next unicorn startup, this library gives your AI assistant instant access to elite battle-tested patterns, zero-placeholder code templates, and architectural decision trees.
 
@@ -28,7 +28,7 @@ Whether you are a **student** learning state-of-the-art tech, an **enterprise em
 
 ## 🚀 1-Click Installation
 
-Install all **547 skills** into any existing project or new workspace in seconds:
+Install all **537 skills** into any existing project or new workspace in seconds:
 
 ### Windows (PowerShell)
 ```powershell
@@ -50,11 +50,11 @@ git clone https://github.com/aakash1552005/universal-agent-skills.git
 
 ## 🏛️ Unified "All-in-One" Architecture
 
-All 547 skills live in a single, standardized directory structure with zero duplicate folders or clutter:
+All 537 skills live in a single, standardized directory structure with zero duplicate folders or clutter:
 
 ```
 universal-agent-skills/
-├── .agents/skills/                     # 🌟 Single Unified Skills Root (547 Skills)
+├── .agents/skills/                     # 🌟 Single Unified Skills Root (537 Skills)
 │   ├── gstack-plan-ceo-review/         # Garry Tan's GStack Leadership Skills
 │   ├── performance-optimization/       # Addy Osmani's Core Engineering Skills
 │   ├── owasp-top-10-testing/           # Strix Cybersecurity & Pentesting
@@ -64,7 +64,7 @@ universal-agent-skills/
 │   ├── mcp-server-and-client-builder/  # Anthropic Model Context Protocol (MCP)
 │   ├── n8n-workflow-automation/        # n8n & AI Agent Workflow Automation
 │   ├── saas-billing-and-stripe/        # Stripe Subscription Monetization
-│   └── ... (547 production skills total)
+│   └── ... (537 production skills total)
 ├── .github/
 │   ├── workflows/ci.yml                # Automated CI skill validation pipeline
 │   ├── workflows/release.yml           # Automated release publisher
@@ -127,9 +127,9 @@ universal-agent-skills/
 
 ---
 
-## 📑 Full 547-Skill Catalog
+## 📑 Full 537-Skill Catalog
 
-See the comprehensive, searchable index in **[`SKILLS_INDEX.md`](SKILLS_INDEX.md)** with detailed descriptions and paths for all 547 skills organized across:
+See the comprehensive, searchable index in **[`SKILLS_INDEX.md`](SKILLS_INDEX.md)** with detailed descriptions and paths for all 537 skills organized across:
 
 - 🚀 **Startup Launch, SaaS Architecture & Monetization**
 - 🔄 **AI Workflow Automation & Orchestration (n8n, Google Flows, Temporal)**
