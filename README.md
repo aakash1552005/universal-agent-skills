@@ -184,3 +184,15 @@ Contributions are welcome. If you have a workflow, pattern, or specialized AI sk
 ## 📜 License
 
 Distributed under the **MIT License**.
+
+<div align="center">
+
+### **Go build something amazing! 🚀**
+
+***
+
+**🎭 The Agency: Your AI Dream Team Awaits 🎭**
+
+⭐ [Star this repo](https://github.com/aakash1552005/universal-agent-skills/stargazers) • 🍴 [Fork it](https://github.com/aakash1552005/universal-agent-skills/fork) • 🐛 [Report an issue](https://github.com/aakash1552005/universal-agent-skills/issues)
+
+</div>
