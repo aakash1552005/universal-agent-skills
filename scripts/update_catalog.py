@@ -38,6 +38,12 @@ def build_index():
     print(f"Total skills indexed: {len(all_skills)}")
     
     categories = {
+        "🌊 Ruflo Agentic Swarms, Hive Mind & Multi-Agent Coordination": [
+            "swarm", "hive-mind", "queen", "byzantine", "consensus", "gossip", "crdt", "raft", 
+            "quorum", "sparc", "agentdb", "reasoningbank", "flow-nexus", "v3-", "topology", 
+            "jujutsu", "safla", "sona", "pair-programming", "worker-", "agentic-jujutsu", 
+            "memory-management", "hooks-automation", "stream-chain", "claims"
+        ],
         "🚀 Startup Launch, SaaS Architecture & Monetization": [
             "stripe", "billing", "multi-tenancy", "auth-and-session", "startup-growth", "mobile-cross-platform", "gateway"
         ],
@@ -52,7 +58,7 @@ def build_index():
             "data", "spark", "airflow", "dbt", "sql", "postgres", "polars", "lakehouse", "snowflake", "databricks", "kpi", "analytics", "quant"
         ],
         "🧠 Machine Learning, Deep Learning & Vision": [
-            "machine-learning", "pytorch", "peft", "quantization", "vllm", "vision", "time-series", "ml-pipeline"
+            "machine-learning", "pytorch", "peft", "quantization", "vllm", "vision", "time-series", "ml-pipeline", "neural"
         ],
         "🏢 Big Tech Architectures (Google, Microsoft, Meta, AWS, Netflix)": [
             "google", "microsoft", "aws", "meta", "netflix", "sre", "grpc", "azure", "dotnet", "semantic-kernel"
@@ -78,7 +84,7 @@ def build_index():
     # Table of contents
     index_md += "## Quick Navigation\n"
     for cat in categories.keys():
-        anchor = cat.lower().replace(" ", "-").replace(",", "").replace("&", "").replace("(", "").replace(")", "").replace("🚀", "").replace("🔄", "").replace("📈", "").replace("🤖", "").replace("📊", "").replace("🧠", "").replace("🏢", "").replace("🎨", "").replace("⚡", "").replace("🔒", "").replace("🚢", "").strip("-")
+        anchor = cat.lower().replace(" ", "-").replace(",", "").replace("&", "").replace("(", "").replace(")", "").replace("🌊", "").replace("🚀", "").replace("🔄", "").replace("📈", "").replace("🤖", "").replace("📊", "").replace("🧠", "").replace("🏢", "").replace("🎨", "").replace("⚡", "").replace("🔒", "").replace("🚢", "").strip("-")
         index_md += f"- [{cat}](#{anchor})\n"
     index_md += "\n---\n\n"
     

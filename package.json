@@ -1,16 +1,19 @@
 {
   "name": "universal-agent-skills",
   "version": "1.0.0",
-  "description": "Production-grade library of 279 AI agent skills across engineering, data, AI, cloud, security, and startup architecture.",
+  "description": "Production-grade library of 671 AI agent skills across multi-agent swarms, engineering, data, AI, cloud, security, and startup architecture.",
   "main": "index.js",
   "scripts": {
-    "test": "node -e \"console.log('Validating 279 skills...');\" && py -3 scripts/validate_skills.py",
+    "test": "node -e \"console.log('Validating 671 skills...');\" && py -3 scripts/validate_skills.py",
     "build:index": "py -3 scripts/update_catalog.py"
   },
   "keywords": [
     "ai",
     "agent-skills",
     "ai-agents",
+    "ruflo",
+    "swarms",
+    "hive-mind",
     "gstack",
     "antigravity",
     "cursor",

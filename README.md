@@ -3,16 +3,16 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
-[![Total Skills](https://img.shields.io/badge/Total%20Skills-537%20Skills-emerald?style=for-the-badge)](#-full-537-skill-catalog)
+[![Total Skills](https://img.shields.io/badge/Total%20Skills-671%20Skills-emerald?style=for-the-badge)](#-full-671-skill-catalog)
 [![Unified Location](https://img.shields.io/badge/Architecture-All--in--One%20Unified%20Directory-blueviolet?style=for-the-badge)](#-unified-all-in-one-architecture)
 [![Active Updates](https://img.shields.io/badge/Status-Actively%20Maintained%20%26%20Updated-success?style=for-the-badge)](#-continuous-updates--roadmap)
 [![Cross-Tool Compatibility](https://img.shields.io/badge/Compatible%20With-Antigravity%20|%20Claude%20Code%20|%20Cursor%20|%20Windsurf-indigo?style=for-the-badge)](#-zero-config-compatibility)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
 
-### **A unified library of 537 AI agent skills.**
-*Provide your AI coding assistant with system prompts and workflows for engineering, data, marketing, and specialized roles.*
+### **A unified library of 671 AI agent skills.**
+*Provide your AI coding assistant with system prompts, multi-agent swarms, and workflows for engineering, data, marketing, and specialized roles.*
 
-[Quickstart](#-1-click-installation) • [Why This Library](#-why-universal-agent-skills) • [What You Can Build](#-what-you-can-build) • [Full 537-Skill Catalog](#-full-537-skill-catalog) • [Contributing](#-contributing) • [License](#-license)
+[Quickstart](#-1-click-installation) • [Why This Library](#-why-universal-agent-skills) • [What You Can Build](#-what-you-can-build) • [Full 671-Skill Catalog](#-full-671-skill-catalog) • [Contributing](#-contributing) • [License](#-license)
 
 </div>
 
@@ -20,9 +20,9 @@
 
 ## 🌟 Why Universal Agent Skills?
 
-Instead of scattered prompt snippets or tool-specific plugins, **Universal Agent Skills** consolidates **537 skills into a single workspace standard** (`.agents/skills/`). 
+Instead of scattered prompt snippets or tool-specific plugins, **Universal Agent Skills** consolidates **671 skills into a single workspace standard** (`.agents/skills/`). 
 
-Whether you are an individual developer, a researcher, or a team building software, this library provides your AI assistant with structured prompts, code templates, and architectural patterns.
+Whether you are an individual developer, a researcher, or a team building software, this library provides your AI assistant with structured prompts, multi-agent swarm coordinators, code templates, and architectural patterns.
 
 ---
 
@@ -50,11 +50,13 @@ git clone https://github.com/aakash1552005/universal-agent-skills.git
 
 ## 🏛️ Unified "All-in-One" Architecture
 
-All 537 skills reside in a standardized directory structure:
+All 671 skills reside in a standardized directory structure:
 
 ```
 universal-agent-skills/
-├── .agents/skills/                     # 🌟 Single Unified Skills Root (537 Skills)
+├── .agents/skills/                     # 🌟 Single Unified Skills Root (671 Skills)
+│   ├── hive-mind-advanced/             # Ruflo: Queen-Led Swarm & Consensus Coordination
+│   ├── sparc-methodology/              # Ruflo: SPARC Autonomous Coding Swarm
 │   ├── gstack-plan-ceo-review/         # Garry Tan's GStack Leadership Skills
 │   ├── performance-optimization/       # Addy Osmani's Core Engineering Skills
 │   ├── owasp-top-10-testing/           # Strix Cybersecurity & Pentesting
@@ -63,7 +65,7 @@ universal-agent-skills/
 │   ├── marketing-tiktok-strategist/    # Agency Agents: Digital Marketing & SEO
 │   ├── gis-spatial-data-scientist/     # Agency Agents: Spatial Computing & GIS
 │   ├── n8n-workflow-automation/        # n8n & AI Agent Workflow Automation
-│   └── ... (537 production skills total)
+│   └── ... (671 production skills total)
 ├── .github/
 │   ├── workflows/ci.yml                # Automated CI skill validation pipeline
 │   ├── workflows/release.yml           # Automated release publisher
@@ -86,23 +88,29 @@ universal-agent-skills/
 
 | Persona | How Universal Skills Helps |
 |---|---|
+| **🌊 Swarm & Autonomous Agent Builders** | Deploy Ruflo multi-player swarms, Queen coordinators, Byzantine consensus, CRDT sync, AgentDB neural memory, and Flow Nexus execution. |
 | **🏢 Enterprise Engineers & Architects** | Access standard production patterns: Google SRE (SLI/SLO), microservices resilience, .NET 9 CQRS, Go microservices, and code reviews. |
 | **🚀 Startup Founders & Solo Builders** | Build SaaS applications using templates for Stripe billing, PostgreSQL RLS multi-tenancy, Auth.js, and Flutter apps. |
-| **🤖 AI Agent & Automation Engineers** | Reference workflows for Model Context Protocol (MCP), LangGraph, CrewAI, and n8n visual pipelines. |
+| **🤖 AI Agent & Automation Engineers** | Reference workflows for Model Context Protocol (MCP), LangGraph, CrewAI, AutoGen, and n8n visual pipelines. |
 | **📈 Marketing, Sales & Strategy** | Use specialized agent prompts for SEO, B2B sales pipeline analysis, paid media, product management, and spatial computing design. |
 
 ---
 
 ## 🛠️ What You Can Build
 
-Combine engineering skills and specialized agency roles for your workflows.
+Combine engineering skills, multi-agent swarms, and specialized agency roles for your workflows.
+
+### 🌊 Autonomous Multi-Agent Swarms & Intelligence
+- **Swarm Orchestration**: Queen-led multi-agent topologies, Byzantine fault tolerance, Raft consensus, and CRDT synchronizers.
+- **AgentDB & Reasoning Memory**: Semantic routing, HNSW vector search, hierarchical recall, and continuous learning plugins.
+- **SPARC Engineering Methodology**: Specification, Pseudocode, Architecture, Refinement, and Completion autonomous coder loops.
 
 ### 🌐 Scalable SaaS & Engineering
 - **SaaS Platforms**: Implement Stripe Subscriptions, PostgreSQL RLS, Next.js 15 & Auth.js.
 - **Cross-Platform Applications**: Build with Flutter 3.x, React Native / Expo, and offline-first SQLite.
 - **Infrastructure**: Configure Kubernetes, Terraform IaC, Databricks Lakehouse, and AWS Serverless.
 
-### 🧠 Advanced AI & Autonomous Agents
+### 🧠 Advanced AI & Autonomous Workflows
 - **Agentic Ecosystems**: Set up MCP Tool Servers, LangGraph State Machines, and CrewAI swarms.
 - **Data & Analytics**: Generate SQL from natural language, process Polars & Arrow streams, and automate dbt transformations.
 - **Machine Learning**: Fine-tune PEFT/LoRA models, implement PyTorch vision pipelines, and set up RAG architectures.
@@ -116,27 +124,29 @@ Combine engineering skills and specialized agency roles for your workflows.
   - *Finance*: Virtual economy design, investment research, and bookkeeping processes.
 
 ### 🔒 Enterprise Security & Compliance
-- **Offensive & Defensive Security**: Audit against OWASP Top 10 and implement zero-trust architectures.
+- **Offensive & Defensive Security**: Audit against OWASP Top 10, run Strix automated pentests, and implement zero-trust architectures.
 - **Compliance Automation**: Reference SOC2, GDPR, PCI DSS, and FedRAMP governance protocols.
 
 ---
 
 ## 📦 Curated Skill Ecosystem (Included Sources)
 
-1. **[Garry Tan's GStack](https://github.com/garrytan/gstack)**: CEO/Eng/Design plan reviews, QA automation, shipping, and incident investigation.
-2. **[Agency Agents Framework](https://github.com/msitarzewski/agency-agents)**: Over 260+ specialized personas spanning Marketing, GIS, Healthcare, Game Development, Finance, Sales, and Strategy.
-3. **[Addy Osmani's Agent Skills](https://github.com/addyosmani/agent-skills)**: Web performance, Core Web Vitals, API ergonomics, and architectural ADRs.
-4. **[Strix AI Security](https://github.com/usestrix/strix)**: Vulnerability scanning, penetration testing, and security patch remediation.
-5. **[UI/UX Pro Max & 21st.dev Magic UI](https://21st.dev)**: Component blocks, Tailwind CSS v4, bento grids, and visual aesthetics.
-6. **Big Tech Architectures**: Google SRE / BigQuery / gRPC, Microsoft Azure / .NET 9, AWS Serverless, Meta React 19 / GraphQL, Netflix resilience.
-7. **AI Agent Frameworks**: Anthropic MCP, LangGraph, CrewAI, AutoGen, LlamaIndex, and Long-Term Memory.
+1. **[Ruflo Agent Meta-Harness](https://github.com/ruvnet/ruflo)**: Multi-player agent swarms, Queen coordination, Hive Mind consensus, Byzantine fault tolerance, CRDT synchronization, AgentDB neural memory, SPARC methodology, and Flow Nexus distributed execution.
+2. **[Garry Tan's GStack](https://github.com/garrytan/gstack)**: CEO/Eng/Design plan reviews, QA automation, shipping, and incident investigation.
+3. **[Agency Agents Framework](https://github.com/msitarzewski/agency-agents)**: Over 260+ specialized personas spanning Marketing, GIS, Healthcare, Game Development, Finance, Sales, and Strategy.
+4. **[Addy Osmani's Agent Skills](https://github.com/addyosmani/agent-skills)**: Web performance, Core Web Vitals, API ergonomics, and architectural ADRs.
+5. **[Strix AI Security](https://github.com/usestrix/strix)**: Vulnerability scanning, penetration testing, and security patch remediation.
+6. **[UI/UX Pro Max & 21st.dev Magic UI](https://21st.dev)**: Component blocks, Tailwind CSS v4, bento grids, and visual aesthetics.
+7. **Big Tech Architectures**: Google SRE / BigQuery / gRPC, Microsoft Azure / .NET 9, AWS Serverless, Meta React 19 / GraphQL, Netflix resilience.
+8. **AI Agent Frameworks**: Anthropic MCP, LangGraph, CrewAI, AutoGen, LlamaIndex, and Long-Term Memory.
 
 ---
 
-## 📑 Full 537-Skill Catalog
+## 📑 Full 671-Skill Catalog
 
-See the complete index in **[`SKILLS_INDEX.md`](SKILLS_INDEX.md)** with detailed descriptions and paths for all 537 skills organized across:
+See the complete index in **[`SKILLS_INDEX.md`](SKILLS_INDEX.md)** with detailed descriptions and paths for all 671 skills organized across:
 
+- 🌊 **Ruflo Agentic Swarms, Hive Mind & Multi-Agent Coordination**
 - 🚀 **Startup Launch, SaaS Architecture & Monetization**
 - 🔄 **AI Workflow Automation & Orchestration (n8n, Google Flows, Temporal)**
 - 📈 **SEO, AEO (Answer Engine Optimization) & GEO (Generative Engine Optimization)**
