@@ -1,4 +1,4 @@
-# Universal AI Agent Skills Library Installer (Windows PowerShell)
+﻿# Universal AI Agent Skills Library Installer (Windows PowerShell)
 # Usage: irm https://raw.githubusercontent.com/aakash1552005/universal-agent-skills/main/install.ps1 | iex
 # Or locally: .\install.ps1
 
@@ -7,7 +7,7 @@ param (
 )
 
 Write-Host "=================================================================" -ForegroundColor Cyan
-Write-Host " 🚀 Installing Universal AI Agent Skills (279 Skills) " -ForegroundColor Green
+Write-Host " 🚀 Installing Universal AI Agent Skills (671 Skills) " -ForegroundColor Green
 Write-Host " Target Directory: $TargetDir" -ForegroundColor Yellow
 Write-Host "=================================================================" -ForegroundColor Cyan
 
@@ -35,6 +35,6 @@ Copy-Item -Recurse -Force (Join-Path $TempDir ".agents\skills\*") $DestAgents
 Remove-Item -Recurse -Force $TempDir
 
 Write-Host ""
-Write-Host "✅ Installation Complete! 279 production-ready agent skills are now active." -ForegroundColor Green
+Write-Host "✅ Installation Complete! 671 production-ready agent skills are now active." -ForegroundColor Green
 Write-Host "🔥 Compatible with: Antigravity IDE, Claude Code, Cursor, Windsurf, OpenCode." -ForegroundColor Yellow
 Write-Host "🚀 Go build something amazing!" -ForegroundColor Cyan

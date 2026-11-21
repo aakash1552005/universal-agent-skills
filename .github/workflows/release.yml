@@ -27,7 +27,9 @@ jobs:
             Welcome to the official **${{ github.ref_name }}** release of the **Universal AI Agent Skills Library**!
             
             ### 📦 What's Included:
-            - **279 Production-Grade Skills** across 11 core categories.
+            - **671 Production-Grade Skills** across 14 core categories.
+            - **Ruflo Agentic Swarms & Hive Mind**: Multi-agent coordination, Queen topologies, Byzantine consensus, CRDT sync, and AgentDB memory.
+            - **Agency Agents Framework**: 260+ specialized personas for Marketing, GIS, Healthcare, Finance, and Strategy.
             - **GStack by Garry Tan**: All 54 subskills (CEO/Eng/Design reviews, QA, Ship, Office Hours).
             - **Addy Osmani's Engineering Skills**: All 24 skills and companion guides.
             - **Strix AI Security**: Automated OWASP Top 10 pentesting and vulnerability remediation.

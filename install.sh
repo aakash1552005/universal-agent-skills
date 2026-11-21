@@ -7,7 +7,7 @@ set -e
 TARGET_DIR="${1:-$(pwd)}"
 
 echo -e "\033[1;36m=================================================================\033[0m"
-echo -e "\033[1;32m 🚀 Installing Universal AI Agent Skills (279 Skills) \033[0m"
+echo -e "\033[1;32m 🚀 Installing Universal AI Agent Skills (671 Skills) \033[0m"
 echo -e "\033[1;33m Target Directory: ${TARGET_DIR}\033[0m"
 echo -e "\033[1;36m=================================================================\033[0m"
 
@@ -25,6 +25,6 @@ cp -r "${TEMP_DIR}/.agents/skills/"* "${TARGET_DIR}/.agents/skills/"
 rm -rf "$TEMP_DIR"
 
 echo ""
-echo -e "\033[1;32m✅ Installation Complete! 279 production-ready agent skills are now active.\033[0m"
+echo -e "\033[1;32m✅ Installation Complete! 671 production-ready agent skills are now active.\033[0m"
 echo -e "\033[1;33m🔥 Compatible with: Antigravity IDE, Claude Code, Cursor, Windsurf, OpenCode.\033[0m"
 echo -e "\033[1;36m🚀 Go build something amazing!\033[0m"

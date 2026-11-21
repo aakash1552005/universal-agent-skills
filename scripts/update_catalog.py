@@ -5,27 +5,41 @@ from pathlib import Path
 BASE_DIR = Path(__file__).parent.parent
 SKILLS_DIR = BASE_DIR / ".agents" / "skills"
 
+
 def parse_skill(skill_folder: Path):
     skill_file = skill_folder / "SKILL.md"
     if not skill_file.exists():
         return None
     content = skill_file.read_text(encoding="utf-8", errors="ignore")
-    
-    # Extract YAML frontmatter
+
     name = skill_folder.name
     desc = "No description provided."
-    
-    match = re.search(r"^---\s*\n(.*?)\n---\s*\n", content, re.DOTALL)
+
+    match = re.search(r"^---\s*\n(.*?)\n---", content, re.DOTALL)
     if match:
         fm = match.group(1)
         name_match = re.search(r"^name:\s*(.+)$", fm, re.MULTILINE)
         if name_match:
-            name = name_match.group(1).strip()
-        desc_match = re.search(r"^description:\s*(.+)$", fm, re.MULTILINE)
-        if desc_match:
-            desc = desc_match.group(1).strip()
-            
+            name = name_match.group(1).strip().strip("'\"")
+
+        # Check for multi-line block scalar: description: > or description: |
+        desc_block_match = re.search(
+            r"^description:\s*[>|]-?\s*\n((?:[ \t]+.+\n*)+)", fm, re.MULTILINE
+        )
+        if desc_block_match:
+            lines = [l.strip() for l in desc_block_match.group(1).splitlines() if l.strip()]
+            desc = " ".join(lines)
+        else:
+            desc_match = re.search(r"^description:\s*(.+)$", fm, re.MULTILINE)
+            if desc_match:
+                desc = desc_match.group(1).strip().strip("'\"")
+
+    # Normalize description
+    desc = re.sub(r"\s+", " ", desc).strip()
+    # Escape pipe characters so markdown table does not break
+    desc = desc.replace("|", "\\|")
     return {"name": name, "folder": skill_folder.name, "description": desc}
+
 
 def build_index():
     all_skills = []
@@ -34,28 +48,30 @@ def build_index():
             s = parse_skill(item)
             if s:
                 all_skills.append(s)
-                
+
     print(f"Total skills indexed: {len(all_skills)}")
-    
+
     categories = {
         "🌊 Ruflo Agentic Swarms, Hive Mind & Multi-Agent Coordination": [
-            "swarm", "hive-mind", "queen", "byzantine", "consensus", "gossip", "crdt", "raft", 
-            "quorum", "sparc", "agentdb", "reasoningbank", "flow-nexus", "v3-", "topology", 
-            "jujutsu", "safla", "sona", "pair-programming", "worker-", "agentic-jujutsu", 
+            "swarm", "hive-mind", "queen", "byzantine", "consensus", "gossip", "crdt", "raft",
+            "quorum", "sparc", "agentdb", "reasoningbank", "flow-nexus", "v3-", "topology",
+            "jujutsu", "safla", "sona", "pair-programming", "worker-", "agentic-jujutsu",
             "memory-management", "hooks-automation", "stream-chain", "claims"
         ],
         "🚀 Startup Launch, SaaS Architecture & Monetization": [
             "stripe", "billing", "multi-tenancy", "auth-and-session", "startup-growth", "mobile-cross-platform", "gateway"
         ],
         "🔄 AI Workflow Automation & Orchestration (n8n, Google Flows, Temporal)": [
-            "n8n", "workflows", "make-zapier", "temporal", "browser-use"
+            "n8n", "workflows", "make-zapier", "temporal", "browser-use", "automation-governance"
         ],
-        "📈 SEO, AEO & GEO": ["seo", "aeo", "geo", "programmatic-seo"],
+        "📈 SEO, AEO & GEO": [
+            "seo", "aeo", "geo", "programmatic-seo"
+        ],
         "🤖 AI Agents, LLMs, RAG & Prompt Engineering": [
-            "agent", "prompt", "rag", "vector", "mcp", "langgraph", "crewai", "autogen", "llamaindex", "llm"
+            "agent", "prompt", "rag", "vector", "mcp", "langgraph", "crewai", "autogen", "llamaindex", "llm", "embeddings"
         ],
         "📊 Data Engineering, Data Science & Analytics": [
-            "data", "spark", "airflow", "dbt", "sql", "postgres", "polars", "lakehouse", "snowflake", "databricks", "kpi", "analytics", "quant"
+            "data", "spark", "airflow", "dbt", "sql", "postgres", "polars", "lakehouse", "snowflake", "databricks", "kpi", "analytics", "quant", "bi-", "gis-"
         ],
         "🧠 Machine Learning, Deep Learning & Vision": [
             "machine-learning", "pytorch", "peft", "quantization", "vllm", "vision", "time-series", "ml-pipeline", "neural"
@@ -64,55 +80,67 @@ def build_index():
             "google", "microsoft", "aws", "meta", "netflix", "sre", "grpc", "azure", "dotnet", "semantic-kernel"
         ],
         "🎨 UI/UX Design, Visual Styles & Frontend Engineering": [
-            "ui-", "taste", "21st", "slides", "brand", "design", "banner", "web-design", "vue", "nuxt", "svelte", "tailwind"
+            "ui-", "taste", "21st", "slides", "brand", "design", "banner", "web-design", "vue", "nuxt", "svelte", "tailwind", "brutalist", "composition-patterns"
         ],
         "⚡ Backend & Systems Engineering": [
-            "python", "nodejs", "golang", "rust", "php", "scala", "api", "system-architecture"
+            "python", "nodejs", "golang", "rust", "php", "scala", "api", "system-architecture", "fastapi", "django"
         ],
         "🔒 Cybersecurity, DevSecOps & Compliance": [
             "security", "strix", "owasp", "pentest", "cybersecurity", "semgrep", "pci", "gdpr", "supply-chain"
         ],
         "🚢 Software Engineering Best Practices & Leadership (GStack)": [
-            "gstack", "spec", "test", "code", "devops", "ci-cd", "git", "review", "observability", "debugging", "shipping", "devex", "cso", "qa"
-        ]
+            "gstack", "spec", "test", "code", "devops", "ci-cd", "git", "review", "observability", "debugging", "shipping", "devex", "cso", "qa", "doubt-driven", "documentation-and-adrs", "deprecation-and-migration"
+        ],
+        "💼 Professional Agency Roles, Strategy & Operations": [
+            "academic-", "business-", "change-management", "chief-", "customer-", "marketing-", "sales-", "consultant", "operations", "finance", "hr-", "legal", "executive", "product-manager", "recruiter", "writer", "copywriter", "storyteller", "researcher", "strategist", "analyst"
+        ],
+        "🛠️ Developer Experience, Cloud Deployment & Tooling": [
+            "deploy", "context-engineering", "tooling", "cms-", "desktop-", "drupal", "email-intelligence", "developer-"
+        ],
     }
-    
-    index_md = f"# Comprehensive Universal AI Agent Skills Library Index\n\n"
+
+    index_md = "# Comprehensive Universal AI Agent Skills Library Index\n\n"
     index_md += f"**Total Installed Skills: {len(all_skills)}**\n\n"
     index_md += "This index catalogues all installed, standardized AI agent skills. Each skill includes an actionable `SKILL.md` containing architectural standards, code templates, and decision frameworks.\n\n"
-    
+
     # Table of contents
     index_md += "## Quick Navigation\n"
     for cat in categories.keys():
-        anchor = cat.lower().replace(" ", "-").replace(",", "").replace("&", "").replace("(", "").replace(")", "").replace("🌊", "").replace("🚀", "").replace("🔄", "").replace("📈", "").replace("🤖", "").replace("📊", "").replace("🧠", "").replace("🏢", "").replace("🎨", "").replace("⚡", "").replace("🔒", "").replace("🚢", "").strip("-")
+        anchor = re.sub(r"[^\w\s-]", "", cat).strip().lower()
+        anchor = re.sub(r"[-\s]+", "-", anchor)
         index_md += f"- [{cat}](#{anchor})\n"
     index_md += "\n---\n\n"
-    
+
     categorized_names = set()
-    
+
     for cat, keywords in categories.items():
-        index_md += f"## {cat}\n\n"
-        index_md += "| Skill Name | Description | Path |\n"
-        index_md += "|---|---|---|\n"
-        
+        matched_skills = []
         for s in all_skills:
             matched = any(k in s["folder"].lower() for k in keywords)
             if matched and s["folder"] not in categorized_names:
                 categorized_names.add(s["folder"])
-                index_md += f"| **`{s['name']}`** | {s['description']} | [`.agents/skills/{s['folder']}`](file:///.agents/skills/{s['folder']}/SKILL.md) |\n"
-        index_md += "\n"
-        
+                matched_skills.append(s)
+
+        if matched_skills:
+            index_md += f"## {cat}\n\n"
+            index_md += "| Skill Name | Description | Path |\n"
+            index_md += "|---|---|---|\n"
+            for s in matched_skills:
+                index_md += f"| **`{s['name']}`** | {s['description']} | [`.agents/skills/{s['folder']}`](.agents/skills/{s['folder']}/SKILL.md) |\n"
+            index_md += "\n"
+
     remaining = [s for s in all_skills if s["folder"] not in categorized_names]
     if remaining:
-        index_md += f"## 📦 Other Specialized Skills\n\n"
+        index_md += "## 📦 Other Specialized Skills\n\n"
         index_md += "| Skill Name | Description | Path |\n"
         index_md += "|---|---|---|\n"
         for s in remaining:
-            index_md += f"| **`{s['name']}`** | {s['description']} | [`.agents/skills/{s['folder']}`](file:///.agents/skills/{s['folder']}/SKILL.md) |\n"
+            index_md += f"| **`{s['name']}`** | {s['description']} | [`.agents/skills/{s['folder']}`](.agents/skills/{s['folder']}/SKILL.md) |\n"
         index_md += "\n"
-        
+
     (BASE_DIR / "SKILLS_INDEX.md").write_text(index_md, encoding="utf-8")
-    print("SKILLS_INDEX.md generated successfully.")
+    print(f"SKILLS_INDEX.md generated successfully ({len(categorized_names)} categorized, {len(remaining)} remaining).")
+
 
 if __name__ == "__main__":
     build_index()
