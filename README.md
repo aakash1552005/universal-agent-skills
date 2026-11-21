@@ -3,16 +3,16 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
-[![Total Skills](https://img.shields.io/badge/Total%20Skills-671%20Skills-emerald?style=for-the-badge)](#-full-671-skill-catalog)
+[![Total Skills](https://img.shields.io/badge/Total%20Skills-672%20Skills-emerald?style=for-the-badge)](#-full-672-skill-catalog)
 [![Unified Location](https://img.shields.io/badge/Architecture-All--in--One%20Unified%20Directory-blueviolet?style=for-the-badge)](#-unified-all-in-one-architecture)
 [![Active Updates](https://img.shields.io/badge/Status-Actively%20Maintained%20%26%20Updated-success?style=for-the-badge)](#-continuous-updates--roadmap)
 [![Cross-Tool Compatibility](https://img.shields.io/badge/Compatible%20With-Antigravity%20|%20Claude%20Code%20|%20Cursor%20|%20Windsurf-indigo?style=for-the-badge)](#-zero-config-compatibility)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
 
-### **A unified library of 671 AI agent skills.**
+### **A unified library of 672 AI agent skills with interactive CLI & MCP server.**
 *Provide your AI coding assistant with system prompts, multi-agent swarms, and workflows for engineering, data, marketing, and specialized roles.*
 
-[Quickstart](#-1-click-installation) • [Why This Library](#-why-universal-agent-skills) • [What You Can Build](#-what-you-can-build) • [Full 671-Skill Catalog](#-full-671-skill-catalog) • [Contributing](#-contributing) • [License](#-license)
+[Interactive CLI](#-interactive-cli--selective-installation) • [Web Catalog](#-live-interactive-web-catalog) • [MCP Server](#-model-context-protocol-mcp-server) • [Cookbooks](#-real-world-cookbooks) • [Full Catalog](#-full-672-skill-catalog)
 
 </div>
 
@@ -20,9 +20,77 @@
 
 ## 🌟 Why Universal Agent Skills?
 
-Instead of scattered prompt snippets or tool-specific plugins, **Universal Agent Skills** consolidates **671 skills into a single workspace standard** (`.agents/skills/`). 
+Instead of scattered prompt snippets or tool-specific plugins, **Universal Agent Skills** consolidates **672 skills into a single workspace standard** (`.agents/skills/`). 
 
 Whether you are an individual developer, a researcher, or a team building software, this library provides your AI assistant with structured prompts, multi-agent swarm coordinators, code templates, and architectural patterns.
+
+---
+
+## ⚡ Interactive CLI & Selective Installation
+
+Install specific skills or targeted bundles into any project without bloating your workspace:
+
+```bash
+# Install a specific skill (e.g. Stripe billing)
+npx universal-agent-skills add stripe-billing
+
+# Install targeted curated bundles
+npx universal-agent-skills add @bundle/saas        # Stripe, Postgres RLS, Next.js, Auth.js, Vercel
+npx universal-agent-skills add @bundle/swarms      # Ruflo Queen, SPARC coder, Byzantine consensus
+npx universal-agent-skills add @bundle/security    # Strix OWASP Top 10, Semgrep, Compliance
+npx universal-agent-skills add @bundle/data-ai     # LangGraph, MCP, Vector RAG, Polars, dbt
+npx universal-agent-skills add @bundle/frontend    # UI/UX Pro Max, Brutalism, Glassmorphism, Tailwind v4
+npx universal-agent-skills add @bundle/leadership  # GStack CEO/Eng Review, Ship, Performance, QA
+
+# Interactive guided setup wizard
+npx universal-agent-skills init
+
+# Search across all 672 skills
+npx universal-agent-skills search kubernetes
+```
+
+---
+
+## 🌐 Live Interactive Web Catalog
+
+Explore, search, and copy playbooks directly from our live interactive web catalog:
+👉 **[https://aakash1552005.github.io/universal-agent-skills](https://aakash1552005.github.io/universal-agent-skills)**
+
+- 🔍 Real-time instant search across all 672 skills
+- 🏷️ Filter by Category (Swarms, SaaS, Security, AI Agents, Data, Frontend, Big Tech, Agency)
+- 📋 1-Click "Copy Install Command" and direct GitHub playbook links
+
+---
+
+## 🧠 Model Context Protocol (MCP) Server
+
+Connect the entire library dynamically to **Antigravity IDE**, **Claude Code**, **Cursor**, or **Windsurf** with **zero disk usage**:
+
+Add to your `mcp_servers` configuration:
+```json
+{
+  "mcpServers": {
+    "universal-skills": {
+      "command": "npx",
+      "args": ["-y", "universal-agent-skills", "mcp"]
+    }
+  }
+}
+```
+
+Exposes dynamic tools:
+- `search_skills(query)`: Search 672 skills by keyword, framework, or architecture.
+- `get_skill(skill_name)`: Injects the exact required playbook into the conversation turn on demand.
+- `list_categories()`: Browse the 14 skill categories.
+
+---
+
+## 📖 Real-World Cookbooks
+
+Learn how to chain multiple skills together to build end-to-end production systems:
+- 🚀 **[Cookbook 1: Zero-to-Production SaaS in One Afternoon](cookbooks/01-zero-to-production-saas.md)** (GStack Review → PostgreSQL RLS → Stripe Billing → UI/UX Pro Max → Vercel)
+- 🔒 **[Cookbook 2: Autonomous Security Audit & Pentest Remediation](cookbooks/02-autonomous-security-pentest.md)** (OWASP Top 10 → Pentest Simulation → Hardening → Verified PR)
+- 🌊 **[Cookbook 3: Multi-Agent Swarm Collaboration & Consensus](cookbooks/03-multi-agent-swarm-collaboration.md)** (Queen Coordinator → SPARC Coder → Byzantine Consensus)
 
 ---
 
@@ -142,9 +210,9 @@ Combine engineering skills, multi-agent swarms, and specialized agency roles for
 
 ---
 
-## 📑 Full 671-Skill Catalog
+## 📑 Full 672-Skill Catalog
 
-See the complete index in **[`SKILLS_INDEX.md`](SKILLS_INDEX.md)** with detailed descriptions and paths for all 671 skills organized across:
+See the complete index in **[`SKILLS_INDEX.md`](SKILLS_INDEX.md)** with detailed descriptions and paths for all 672 skills organized across:
 
 - 🌊 **Ruflo Agentic Swarms, Hive Mind & Multi-Agent Coordination**
 - 🚀 **Startup Launch, SaaS Architecture & Monetization**

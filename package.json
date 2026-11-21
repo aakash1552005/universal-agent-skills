@@ -1,10 +1,14 @@
 {
   "name": "universal-agent-skills",
   "version": "1.0.0",
-  "description": "Production-grade library of 671 AI agent skills across multi-agent swarms, engineering, data, AI, cloud, security, and startup architecture.",
-  "main": "index.js",
+  "description": "Production-grade library of 672 AI agent skills across multi-agent swarms, engineering, data, AI, cloud, security, and startup architecture.",
+  "main": "bin/cli.js",
+  "bin": {
+    "universal-skills": "./bin/cli.js",
+    "uas": "./bin/cli.js"
+  },
   "scripts": {
-    "test": "node -e \"console.log('Validating 671 skills...');\" && python scripts/validate_skills.py",
+    "test": "python scripts/validate_skills.py",
     "build:index": "python scripts/update_catalog.py"
   },
   "keywords": [

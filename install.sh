@@ -7,7 +7,7 @@ set -e
 TARGET_DIR="${1:-$(pwd)}"
 
 echo -e "\033[1;36m=================================================================\033[0m"
-echo -e "\033[1;32m 🚀 Installing Universal AI Agent Skills (671 Skills) \033[0m"
+echo -e "\033[1;32m 🚀 Installing Universal AI Agent Skills (672 Skills) \033[0m"
 echo -e "\033[1;33m Target Directory: ${TARGET_DIR}\033[0m"
 echo -e "\033[1;36m=================================================================\033[0m"
 

@@ -1,6 +1,6 @@
 # Comprehensive Universal AI Agent Skills Library Index
 
-**Total Installed Skills: 671**
+**Total Installed Skills: 672**
 
 This index catalogues all installed, standardized AI agent skills. Each skill includes an actionable `SKILL.md` containing architectural standards, code templates, and decision frameworks.
 
@@ -759,6 +759,7 @@ This index catalogues all installed, standardized AI agent skills. Each skill in
 | **`Support Responder`** | Expert customer support specialist delivering exceptional customer service, issue resolution, and user experience optimization. Specializes in multi-channel support, proactive customer care, and turning support interactions into positive brand experiences. | [`.agents/skills/support-support-responder`](.agents/skills/support-support-responder/SKILL.md) |
 | **`Technical Artist`** | Art-to-engine pipeline specialist - Masters shaders, VFX systems, LOD pipelines, performance budgeting, and cross-engine asset optimization | [`.agents/skills/technical-artist`](.agents/skills/technical-artist/SKILL.md) |
 | **`unity-ecs-patterns`** | Master Unity ECS (Entity Component System) with DOTS, Jobs, and Burst for high-performance game development. Use when building data-oriented games, optimizing performance, or working with large entity counts. | [`.agents/skills/unity-ecs-patterns`](.agents/skills/unity-ecs-patterns/SKILL.md) |
+| **`universal-skill-dispatcher`** | Autonomous meta-skill and routing controller for the 671-skill Universal Agent Skills Library. Analyzes user intent, identifies the optimal skill domain, and selectively activates only the top relevant skills to maximize accuracy while minimizing context token overhead. | [`.agents/skills/universal-skill-dispatcher`](.agents/skills/universal-skill-dispatcher/SKILL.md) |
 | **`vercel-cli-with-tokens`** | Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login — e.g. "deploy to vercel", "set up vercel", "add environment variables to vercel". | [`.agents/skills/vercel-cli-with-tokens`](.agents/skills/vercel-cli-with-tokens/SKILL.md) |
 | **`vercel-optimize`** | Use for Vercel cost and performance optimization on deployed projects, especially Next.js, SvelteKit, Nuxt, and limited Astro apps. Collect Vercel metrics, usage, project config, and code scan results first; investigate only metric-backed candidates; produce ranked recommendations grounded in verified files and version-aware Vercel/framework docs. Trigger for Vercel bill reduction, slow or expensive routes, caching opportunities, Function Invocations, Build Minutes, Fast Data Transfer, Core Web Vitals, Bot Management, Fluid compute, or cost breakdown requests. | [`.agents/skills/vercel-optimize`](.agents/skills/vercel-optimize/SKILL.md) |
 | **`Verification & Quality Assurance`** | Comprehensive truth scoring, code quality verification, and automatic rollback system with 0.95 accuracy threshold for ensuring high-quality agent outputs and codebase reliability. | [`.agents/skills/verification-quality`](.agents/skills/verification-quality/SKILL.md) |

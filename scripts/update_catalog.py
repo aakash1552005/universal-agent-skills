@@ -1,9 +1,11 @@
+import json
 import os
 import re
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
 SKILLS_DIR = BASE_DIR / ".agents" / "skills"
+SITE_DIR = BASE_DIR / "site"
 
 
 def parse_skill(skill_folder: Path):
@@ -36,9 +38,16 @@ def parse_skill(skill_folder: Path):
 
     # Normalize description
     desc = re.sub(r"\s+", " ", desc).strip()
-    # Escape pipe characters so markdown table does not break
-    desc = desc.replace("|", "\\|")
-    return {"name": name, "folder": skill_folder.name, "description": desc}
+    clean_desc = desc
+    # Escape pipe characters for markdown tables
+    table_desc = clean_desc.replace("|", "\\|")
+    return {
+        "name": name,
+        "folder": skill_folder.name,
+        "description": clean_desc,
+        "table_description": table_desc,
+        "path": f".agents/skills/{skill_folder.name}/SKILL.md",
+    }
 
 
 def build_index():
@@ -112,6 +121,7 @@ def build_index():
     index_md += "\n---\n\n"
 
     categorized_names = set()
+    catalog_by_category = []
 
     for cat, keywords in categories.items():
         matched_skills = []
@@ -119,6 +129,7 @@ def build_index():
             matched = any(k in s["folder"].lower() for k in keywords)
             if matched and s["folder"] not in categorized_names:
                 categorized_names.add(s["folder"])
+                s["category"] = cat
                 matched_skills.append(s)
 
         if matched_skills:
@@ -126,8 +137,9 @@ def build_index():
             index_md += "| Skill Name | Description | Path |\n"
             index_md += "|---|---|---|\n"
             for s in matched_skills:
-                index_md += f"| **`{s['name']}`** | {s['description']} | [`.agents/skills/{s['folder']}`](.agents/skills/{s['folder']}/SKILL.md) |\n"
+                index_md += f"| **`{s['name']}`** | {s['table_description']} | [`.agents/skills/{s['folder']}`]({s['path']}) |\n"
             index_md += "\n"
+            catalog_by_category.append({"category": cat, "skills": matched_skills})
 
     remaining = [s for s in all_skills if s["folder"] not in categorized_names]
     if remaining:
@@ -135,11 +147,42 @@ def build_index():
         index_md += "| Skill Name | Description | Path |\n"
         index_md += "|---|---|---|\n"
         for s in remaining:
-            index_md += f"| **`{s['name']}`** | {s['description']} | [`.agents/skills/{s['folder']}`](.agents/skills/{s['folder']}/SKILL.md) |\n"
+            s["category"] = "📦 Other Specialized Skills"
+            index_md += f"| **`{s['name']}`** | {s['table_description']} | [`.agents/skills/{s['folder']}`]({s['path']}) |\n"
         index_md += "\n"
+        catalog_by_category.append({"category": "📦 Other Specialized Skills", "skills": remaining})
 
     (BASE_DIR / "SKILLS_INDEX.md").write_text(index_md, encoding="utf-8")
-    print(f"SKILLS_INDEX.md generated successfully ({len(categorized_names)} categorized, {len(remaining)} remaining).")
+
+    # Generate JSON for Web Catalog, CLI and MCP server
+    SITE_DIR.mkdir(parents=True, exist_ok=True)
+    catalog_json_payload = {
+        "version": "1.0.0",
+        "total": len(all_skills),
+        "categorized_count": len(categorized_names),
+        "categories": list(categories.keys()) + ["📦 Other Specialized Skills"],
+        "skills": [
+            {
+                "name": s["name"],
+                "folder": s["folder"],
+                "description": s["description"],
+                "category": s.get("category", "General"),
+                "path": s["path"],
+            }
+            for s in all_skills
+        ],
+    }
+    (SITE_DIR / "catalog.json").write_text(
+        json.dumps(catalog_json_payload, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+    # Also save a copy in scripts/ for CLI fast packaging
+    (BASE_DIR / "scripts" / "catalog.json").write_text(
+        json.dumps(catalog_json_payload, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+    print(
+        f"SKILLS_INDEX.md & catalog.json generated successfully ({len(categorized_names)} categorized, {len(remaining)} remaining)."
+    )
 
 
 if __name__ == "__main__":
