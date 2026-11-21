@@ -4,69 +4,113 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![Total Skills](https://img.shields.io/badge/Total%20Skills-672%20Skills-emerald?style=for-the-badge)](#-full-672-skill-catalog)
-[![Unified Location](https://img.shields.io/badge/Architecture-All--in--One%20Unified%20Directory-blueviolet?style=for-the-badge)](#-unified-all-in-one-architecture)
-[![Active Updates](https://img.shields.io/badge/Status-Actively%20Maintained%20%26%20Updated-success?style=for-the-badge)](#-continuous-updates--roadmap)
-[![Cross-Tool Compatibility](https://img.shields.io/badge/Compatible%20With-Antigravity%20|%20Claude%20Code%20|%20Cursor%20|%20Windsurf-indigo?style=for-the-badge)](#-zero-config-compatibility)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
+[![Web Catalog](https://img.shields.io/badge/Web%20Catalog-Live%20on%20GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)](https://aakash1552005.github.io/universal-agent-skills/)
+[![CLI Tool](https://img.shields.io/badge/CLI-universal--agent--skills-blueviolet?style=for-the-badge&logo=npm)](#-interactive-cli--selective-installation)
+[![MCP Server](https://img.shields.io/badge/MCP-Stdio%20Server%20Ready-black?style=for-the-badge&logo=anthropic)](#-model-context-protocol-mcp-server)
+[![Compatible With](https://img.shields.io/badge/Compatible%20With-Antigravity%20|%20Claude%20Code%20|%20Cursor%20|%20Windsurf-indigo?style=for-the-badge)](#-zero-config-compatibility)
 
-### **A unified library of 672 AI agent skills with interactive CLI & MCP server.**
-*Provide your AI coding assistant with system prompts, multi-agent swarms, and workflows for engineering, data, marketing, and specialized roles.*
+### **The world's most comprehensive, unified library of 672 production AI agent skills.**
+*Empower your AI coding assistants with enterprise-grade system instructions, multi-agent swarms, security playbooks, and full-stack workflows.*
 
-[Interactive CLI](#-interactive-cli--selective-installation) • [Web Catalog](#-live-interactive-web-catalog) • [MCP Server](#-model-context-protocol-mcp-server) • [Cookbooks](#-real-world-cookbooks) • [Full Catalog](#-full-672-skill-catalog)
+[🌐 Live Web Catalog](https://aakash1552005.github.io/universal-agent-skills/) • [⚡ Interactive CLI](#-interactive-cli--selective-installation) • [🧠 MCP Server](#-model-context-protocol-mcp-server) • [📖 Cookbooks](#-real-world-cookbooks) • [📑 Full Catalog](#-full-672-skill-catalog)
 
 </div>
 
 ---
 
-## 🌟 Why Universal Agent Skills?
+## 🚀 Overview
 
-Instead of scattered prompt snippets or tool-specific plugins, **Universal Agent Skills** consolidates **672 skills into a single workspace standard** (`.agents/skills/`). 
+Instead of fragmented prompts or tool-specific lock-in, **Universal Agent Skills** establishes a single open standard (`.agents/skills/`) compatible across **Antigravity IDE**, **Claude Code**, **Cursor**, **Windsurf**, and autonomous swarms.
 
-Whether you are an individual developer, a researcher, or a team building software, this library provides your AI assistant with structured prompts, multi-agent swarm coordinators, code templates, and architectural patterns.
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                        DEVELOPER / AI ASSISTANT                        │
+│             Antigravity  •  Claude Code  •  Cursor  •  Windsurf        │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+           ┌────────────────────────┴────────────────────────┐
+           ▼                                                 ▼
+┌──────────────────────┐                          ┌──────────────────────┐
+│  NPX CLI / BUNDLES   │                          │   STDIO MCP SERVER   │
+│  npx universal-skills│                          │  Dynamic Context     │
+└──────────┬───────────┘                          └──────────┬───────────┘
+           │                                                 │
+           └────────────────────────┬────────────────────────┘
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                   UNIVERSAL AGENT SKILLS LIBRARY                       │
+│  672 Validated Skills  •  Multi-Agent Swarms  •  Enterprise Cookbooks  │
+│  SaaS & Payments • Security & Pentesting • Big Tech • Agency Agents    │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│           🌐 LIVE WEB CATALOG (Instant Search & Filter)                │
+│             https://aakash1552005.github.io/universal-agent-skills/     │
+└────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
 ## ⚡ Interactive CLI & Selective Installation
 
-Install specific skills or targeted bundles into any project without bloating your workspace:
+Install specific skills or curated bundles on-the-fly into any repository without cloning the entire repository:
 
 ```bash
-# Install a specific skill (e.g. Stripe billing)
+# Install a specific skill into .agents/skills/
 npx universal-agent-skills add stripe-billing
 
-# Install targeted curated bundles
+# Install domain bundles
 npx universal-agent-skills add @bundle/saas        # Stripe, Postgres RLS, Next.js, Auth.js, Vercel
 npx universal-agent-skills add @bundle/swarms      # Ruflo Queen, SPARC coder, Byzantine consensus
-npx universal-agent-skills add @bundle/security    # Strix OWASP Top 10, Semgrep, Compliance
+npx universal-agent-skills add @bundle/security    # Strix OWASP Top 10, Semgrep, Compliance, Zero-Trust
 npx universal-agent-skills add @bundle/data-ai     # LangGraph, MCP, Vector RAG, Polars, dbt
 npx universal-agent-skills add @bundle/frontend    # UI/UX Pro Max, Brutalism, Glassmorphism, Tailwind v4
 npx universal-agent-skills add @bundle/leadership  # GStack CEO/Eng Review, Ship, Performance, QA
 
-# Interactive guided setup wizard
+# Interactive terminal wizard
 npx universal-agent-skills init
 
-# Search across all 672 skills
+# Search across all 672 skills by keyword
 npx universal-agent-skills search kubernetes
+
+# Inspect skill details & requirements
+npx universal-agent-skills info hive-mind-advanced
 ```
+
+### CLI Command Reference
+
+| Command | Usage | Description |
+| :--- | :--- | :--- |
+| `add <skill \| @bundle>` | `npx universal-agent-skills add stripe-billing` | Downloads and installs skills directly to `.agents/skills/`. |
+| `search <term>` | `npx universal-agent-skills search postgres` | Fast keyword and domain search across all 672 skills. |
+| `list [filter]` | `npx universal-agent-skills list swarm` | Displays formatted list of skills with descriptions. |
+| `info <skill>` | `npx universal-agent-skills info sparc-methodology` | Displays full frontmatter details, category, and requirements. |
+| `init` | `npx universal-agent-skills init` | Interactive multi-select installer for project setup. |
+| `mcp` | `npx universal-agent-skills mcp` | Spawns standard Stdio Model Context Protocol server. |
 
 ---
 
 ## 🌐 Live Interactive Web Catalog
 
-Explore, search, and copy playbooks directly from our live interactive web catalog:
+Search, filter, and inspect skills directly in the browser:
 👉 **[https://aakash1552005.github.io/universal-agent-skills](https://aakash1552005.github.io/universal-agent-skills)**
 
-- 🔍 Real-time instant search across all 672 skills
-- 🏷️ Filter by Category (Swarms, SaaS, Security, AI Agents, Data, Frontend, Big Tech, Agency)
-- 📋 1-Click "Copy Install Command" and direct GitHub playbook links
+- 🔍 **Real-time instant search** across all 672 skills and tags.
+- 🏷️ **Category Filter Pills** (Swarms, SaaS, Security, AI Agents, Data, Frontend, Big Tech, Agency).
+- 📋 **1-Click Copy Install Command** (`npx universal-agent-skills add <name>`).
+- 📖 **Direct GitHub links** to every skill's source documentation.
 
 ---
 
 ## 🧠 Model Context Protocol (MCP) Server
 
-Connect the entire library dynamically to **Antigravity IDE**, **Claude Code**, **Cursor**, or **Windsurf** with **zero disk usage**:
+Connect the entire 672-skill library to your agent environment with **zero disk clutter**. Your agent queries and retrieves playbooks into context only when needed.
 
-Add to your `mcp_servers` configuration:
+### Configuration
+
+Add to your **Claude Code**, **Cursor**, or **Antigravity** MCP settings:
+
 ```json
 {
   "mcpServers": {
@@ -78,25 +122,36 @@ Add to your `mcp_servers` configuration:
 }
 ```
 
-Exposes dynamic tools:
-- `search_skills(query)`: Search 672 skills by keyword, framework, or architecture.
-- `get_skill(skill_name)`: Injects the exact required playbook into the conversation turn on demand.
-- `list_categories()`: Browse the 14 skill categories.
+Or connect in Claude Code CLI:
+```bash
+claude mcp add universal-skills -- npx -y universal-agent-skills mcp
+```
+
+### Available MCP Tools
+
+- `search_skills(query)`: Search catalog by task, language, or architectural pattern.
+- `get_skill_details(skill_name)`: Returns the complete instructions and system prompt for a skill.
+- `list_skill_bundles()`: Inspect curated multi-skill bundles.
+- `install_skill(skill_name)`: Installs the requested skill directly into the active project workspace.
 
 ---
 
 ## 📖 Real-World Cookbooks
 
-Learn how to chain multiple skills together to build end-to-end production systems:
-- 🚀 **[Cookbook 1: Zero-to-Production SaaS in One Afternoon](cookbooks/01-zero-to-production-saas.md)** (GStack Review → PostgreSQL RLS → Stripe Billing → UI/UX Pro Max → Vercel)
-- 🔒 **[Cookbook 2: Autonomous Security Audit & Pentest Remediation](cookbooks/02-autonomous-security-pentest.md)** (OWASP Top 10 → Pentest Simulation → Hardening → Verified PR)
-- 🌊 **[Cookbook 3: Multi-Agent Swarm Collaboration & Consensus](cookbooks/03-multi-agent-swarm-collaboration.md)** (Queen Coordinator → SPARC Coder → Byzantine Consensus)
+Chaining skills together produces autonomous execution pipelines. Explore our step-by-step guides:
+
+- 🚀 **[Cookbook 1: Zero-to-Production SaaS in One Afternoon](cookbooks/01-zero-to-production-saas.md)**  
+  *GStack CEO Plan → PostgreSQL RLS Multi-Tenancy → Stripe Billing → UI/UX Pro Max → Vercel Deployment.*
+- 🔒 **[Cookbook 2: Autonomous Security Audit & Pentest Remediation](cookbooks/02-autonomous-security-pentest.md)**  
+  *Strix OWASP Top 10 → Pentest Simulation → Hardening & Secrets Hygiene → CI Guardrails.*
+- 🌊 **[Cookbook 3: Multi-Agent Swarm Collaboration & Consensus](cookbooks/03-multi-agent-swarm-collaboration.md)**  
+  *Ruflo Queen Coordinator → SPARC Autonomous Coder → Byzantine Consensus Verification.*
 
 ---
 
-## 🚀 1-Click Installation
+## 🚀 1-Click Complete Installation
 
-Install the skills into your existing project or new workspace:
+To install all 672 skills directly into your workspace:
 
 ### Windows (PowerShell)
 ```powershell
@@ -108,46 +163,97 @@ irm https://raw.githubusercontent.com/aakash1552005/universal-agent-skills/main/
 curl -fsSL https://raw.githubusercontent.com/aakash1552005/universal-agent-skills/main/install.sh | bash
 ```
 
-### Manual Git Clone
+### Git Submodule / Clone
 ```bash
 git clone https://github.com/aakash1552005/universal-agent-skills.git
-# Copy .agents/ into your target repository root
+# Copy .agents/skills/ into your repository root
 ```
 
 ---
 
-## 🏛️ Unified "All-in-One" Architecture
+## 🏛️ Standardized Architecture
 
-All 671 skills reside in a standardized directory structure:
+All skills strictly conform to standard specifications with valid YAML frontmatter:
 
 ```
 universal-agent-skills/
-├── .agents/skills/                     # 🌟 Single Unified Skills Root (671 Skills)
-│   ├── hive-mind-advanced/             # Ruflo: Queen-Led Swarm & Consensus Coordination
-│   ├── sparc-methodology/              # Ruflo: SPARC Autonomous Coding Swarm
-│   ├── gstack-plan-ceo-review/         # Garry Tan's GStack Leadership Skills
-│   ├── performance-optimization/       # Addy Osmani's Core Engineering Skills
+├── .agents/skills/                     # 🌟 Unified Skills Directory (672 Skills)
+│   ├── universal-skill-dispatcher/     # Autonomous Meta-Skill Router
+│   ├── hive-mind-advanced/             # Ruflo: Queen-Led Swarm & Consensus
+│   ├── sparc-methodology/              # Ruflo: SPARC Autonomous Coding Swarms
+│   ├── gstack-plan-ceo-review/         # Garry Tan's GStack Leadership Suite
+│   ├── performance-optimization/       # Addy Osmani's Core Web Performance
 │   ├── owasp-top-10-testing/           # Strix Cybersecurity & Pentesting
-│   ├── ui-ux-pro-max/                  # UI/UX Pro Max & 35+ Visual Styles
+│   ├── ui-ux-pro-max/                  # UI/UX Pro Max Design Intelligence
 │   ├── google-cloud-sre-patterns/      # Google SRE & Distributed Tracing
+│   ├── stripe-billing/                 # Production Subscription Architecture
 │   ├── marketing-tiktok-strategist/    # Agency Agents: Digital Marketing & SEO
-│   ├── gis-spatial-data-scientist/     # Agency Agents: Spatial Computing & GIS
-│   ├── n8n-workflow-automation/        # n8n & AI Agent Workflow Automation
-│   └── ... (671 production skills total)
-├── .github/
-│   ├── workflows/ci.yml                # Automated CI skill validation pipeline
-│   ├── workflows/release.yml           # Automated release publisher
-│   └── ISSUE_TEMPLATE/                 # Structured community contribution forms
+│   └── ... (672 production skills total)
+├── bin/
+│   └── cli.js                          # Zero-dependency CLI & stdio MCP server
+├── cookbooks/                          # Step-by-step end-to-end implementation guides
+├── site/                               # Live GitHub Pages Web Catalog
 ├── scripts/
-│   ├── validate_skills.py              # CLI automated syntax & frontmatter tester
-│   └── update_catalog.py               # Automated SKILLS_INDEX.md catalog generator
-├── install.ps1                         # Windows installer
-├── install.sh                          # Unix installer
-├── SKILLS_INDEX.md                     # Complete categorized index
-├── CONTRIBUTING.md                     # Contribution guide
-├── CODE_OF_CONDUCT.md                  # Contributor Covenant v2.1
-├── SECURITY.md                         # Security policy
-└── LICENSE                             # MIT Open Source License
+│   ├── validate_skills.py              # Automated syntax, schema & quality validator
+│   └── update_catalog.py               # Dynamic SKILLS_INDEX.md & JSON generator
+├── install.ps1                         # Windows 1-click installer
+├── install.sh                          # Unix 1-click installer
+└── SKILLS_INDEX.md                     # Complete categorized skills encyclopedia
+```
+
+---
+
+## 📑 Full 672-Skill Catalog Breakdown
+
+Explore the detailed directory in **[`SKILLS_INDEX.md`](SKILLS_INDEX.md)**:
+
+| Category | Icon | Skills | Highlights |
+| :--- | :---: | :---: | :--- |
+| **Ruflo Swarms & Hive Mind** | 🌊 | 24 | Queen coordinator, SPARC coder, Byzantine fault tolerance, CRDT sync, AgentDB. |
+| **Startup Launch & SaaS** | 🚀 | 18 | Stripe billing, Postgres RLS, Auth.js, Next.js 15, Freemium tiers, Analytics. |
+| **Workflow Automation** | 🔄 | 22 | n8n visual automation, Temporal workflows, Webhooks, Event queues. |
+| **SEO, AEO & GEO** | 📈 | 26 | Programmatic SEO, Answer Engine Optimization, Search Console telemetry. |
+| **AI Agents & LLMs** | 🤖 | 42 | MCP servers, LangGraph state machines, CrewAI, AutoGen, Vector RAG. |
+| **Data Engineering & Science** | 📊 | 48 | BigQuery, Polars & Arrow, dbt pipelines, Snowflake, DuckDB analytics. |
+| **ML & Computer Vision** | 🧠 | 36 | PyTorch, Hugging Face PEFT/LoRA, YOLO, OpenCV, ONNX runtime. |
+| **Big Tech Architectures** | 🏢 | 34 | Google SRE, AWS Serverless, Azure .NET 9, Meta React 19, Netflix chaos. |
+| **UI/UX & Design Systems** | 🎨 | 52 | UI/UX Pro Max, Glassmorphism, Brutalism, Apple aesthetic, Tailwind v4. |
+| **Backend & Systems** | ⚡ | 58 | FastAPI, Go microservices, Rust async, Spring Boot, Node.js concurrency. |
+| **Cybersecurity & DevSecOps** | 🔒 | 40 | Strix OWASP Top 10, Semgrep, Trivy, Zero-Trust, SOC2/GDPR compliance. |
+| **Software Quality & Lead** | 🚢 | 65 | Garry Tan GStack, Addy Osmani engineering, TDD, Clean Architecture. |
+| **Agency Roles & Strategy** | 💼 | 116 | Product Managers, Sales Ops, Finance Analysts, GIS Specialists, Legal. |
+| **Developer Experience** | 🛠️ | 91 | Docker, Kubernetes, GitHub Actions CI/CD, Terraform, Vitest, Playwright. |
+
+---
+
+## 🌐 Zero-Config Compatibility
+
+Every skill conforms to standard markdown format with UTF-8 encoding and YAML frontmatter (`name`, `description`):
+- ✅ **Antigravity IDE** (`.agents/skills/`)
+- ✅ **Claude Code** (`.agents/skills/` or `.claude/skills/`)
+- ✅ **Cursor** (`.agents/skills/`)
+- ✅ **Windsurf** (`.agents/skills/`)
+- ✅ **Devin & OpenCode Swarms**
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have built or refined a skill, check out [`CONTRIBUTING.md`](CONTRIBUTING.md) and submit a Pull Request. Every submission is automatically verified via our GitHub Actions quality gate.
+
+---
+
+## 📜 License
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
+
+<div align="center">
+
+### **Go build something amazing! 🚀**
+
+⭐ [Star this repo](https://github.com/aakash1552005/universal-agent-skills/stargazers) • 🍴 [Fork it](https://github.com/aakash1552005/universal-agent-skills/fork) • 🐛 [Report an issue](https://github.com/aakash1552005/universal-agent-skills/issues)
+
+</div>
 ```
 
 ---

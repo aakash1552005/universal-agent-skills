@@ -1,4 +1,4 @@
-﻿# Universal AI Agent Skills Library Installer (Windows PowerShell)
+# Universal AI Agent Skills Library Installer (Windows PowerShell)
 # Usage: irm https://raw.githubusercontent.com/aakash1552005/universal-agent-skills/main/install.ps1 | iex
 # Or locally: .\install.ps1
 
