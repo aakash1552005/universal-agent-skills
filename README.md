@@ -18,6 +18,55 @@
 
 ---
 
+> [!IMPORTANT]
+> **The Problem:** Modern AI coding assistants (Cursor, Claude Code, Antigravity, Windsurf) default to generic outputs. Developers waste hours manually re-prompting architectural standards, configuring security guardrails, or copy-pasting prompt snippets for every new repository.
+> 
+> **The Solution:** **Universal Agent Skills** provides **672 battle-tested production skills** in a unified open standard (`.agents/skills/`):
+> - ⚡ **Zero-Config CLI**: Run `npx universal-agent-skills add @bundle/saas` to configure your agent in seconds.
+> - 🧠 **Zero-Disk MCP Server**: Connect all 672 skills dynamically via Model Context Protocol without filling your disk.
+> - 🌐 **Instant Web Catalog**: Filter, search, and inspect playbooks visually at [aakash1552005.github.io/universal-agent-skills](https://aakash1552005.github.io/universal-agent-skills/).
+> - 📖 **Multi-Skill Cookbooks**: Chained workflows for Zero-to-Production SaaS, Autonomous Security, and Multi-Agent Swarms.
+
+---
+
+## 📸 See It in Action
+
+### 1. Interactive CLI Setup Wizard
+```bash
+$ npx universal-agent-skills init
+
+⚡ Universal AI Agent Skills — Interactive Setup Wizard
+Select skill bundles to install into this workspace:
+
+  [x] 1. 🚀 Full-Stack SaaS & Monetization (@bundle/saas)
+  [x] 2. 🌊 Multi-Agent Swarms & Consensus (@bundle/swarms)
+  [x] 3. 🔒 Cybersecurity & DevSecOps     (@bundle/security)
+  [ ] 4. 🤖 AI Agents, LLMs & Vector RAG  (@bundle/data-ai)
+  [ ] 5. 🎨 UI/UX Design & Styling        (@bundle/frontend)
+
+✔ Installed 3 bundles (28 skills) into ./.agents/skills/ in 0.4s!
+```
+
+### 2. Live Web Catalog
+👉 **[Open Live Web Catalog](https://aakash1552005.github.io/universal-agent-skills/)**
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ ⚡ Universal AI Agent Skills Library — 672 Production Skills           │
+│ [ 🔍 Search 672 skills... (e.g. stripe, swarm, postgres, owasp) ]      │
+│                                                                        │
+│ Filters: [All] [🌊 Swarms] [🚀 SaaS] [🔒 Security] [🤖 AI] [📊 Data]   │
+│                                                                        │
+│ ┌──────────────────────┐ ┌──────────────────────┐ ┌──────────────────┐ │
+│ │ 🌊 hive-mind-advanced│ │ 🚀 stripe-billing    │ │ 🔒 owasp-top-10  │ │
+│ │ Queen-led swarms &   │ │ Subscriptions, RLS,  │ │ Dynamic security │ │
+│ │ Byzantine consensus  │ │ webhooks, customer   │ │ scanning & patch │ │
+│ │ [📋 Copy Install]    │ │ [📋 Copy Install]    │ │ [📋 Copy Install]│ │
+│ └──────────────────────┘ └──────────────────────┘ └──────────────────┘ │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
 ## 🚀 Overview
 
 Instead of fragmented prompts or tool-specific lock-in, **Universal Agent Skills** establishes a single open standard (`.agents/skills/`) compatible across **Antigravity IDE**, **Claude Code**, **Cursor**, **Windsurf**, and autonomous swarms.
